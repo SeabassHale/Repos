@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store and Iterate through sequences of data - Arrays and foreach", "Store and Iterate through sequences of data - Arrays and foreach.csproj", "{CA438D57-94A2-4E01-9C98-A2945F1C7A65}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA438D57-94A2-4E01-9C98-A2945F1C7A65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA438D57-94A2-4E01-9C98-A2945F1C7A65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA438D57-94A2-4E01-9C98-A2945F1C7A65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA438D57-94A2-4E01-9C98-A2945F1C7A65}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {43343BA3-CC23-4985-91EF-86CD654348D4}
+	EndGlobalSection
+EndGlobal

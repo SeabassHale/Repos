@@ -1,0 +1,46 @@
+﻿<Window x:Class="Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator"
+        mc:Ignorable="d"
+        Title="UglyCalc" Height="375" Width="260">
+    <Grid Background="BlanchedAlmond">
+        <!--Display-->
+        <Label x:Name="EquationDisplay" Background="White" Content="" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Margin="25,25,0,0" VerticalAlignment="Top" Width="190"/>
+        <Label x:Name="CalculatorDisplay" Background="White" Content="" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Margin="50,55,0,0" VerticalAlignment="Top" Width="165"/>
+        <Label x:Name="CalculatorDisplayFunc" Content="" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Margin="25,55,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="SolutionDisplay" Background="White" Content="I'm not used yet :)" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Margin="25,85,0,0" VerticalAlignment="Top" Width="190"/>
+
+        <!--Numbers-->
+        <Button x:Name="ButNum1" Content="1" HorizontalAlignment="Left" Margin="25,200,0,0" VerticalAlignment="Top" Click="ButNum1_Click" Width="30" Height="30"/>
+        <Button x:Name="ButNum2" Content="2" HorizontalAlignment="Left" Margin="65,200,0,0" VerticalAlignment="Top" Click="ButNum2_Click" Width="30" Height="30"/>
+        <Button x:Name="ButNum3" Content="3" HorizontalAlignment="Left" Margin="105,200,0,0" VerticalAlignment="Top" Click="ButNum3_Click" Width="30" Height="30"/>
+        <Button x:Name="ButNum4" Content="4" HorizontalAlignment="Left" Margin="25,160,0,0" VerticalAlignment="Top" Click="ButNum4_Click" Width="30" Height="30"/>
+        <Button x:Name="ButNum5" Content="5" HorizontalAlignment="Left" Margin="65,160,0,0" VerticalAlignment="Top" Click="ButNum5_Click" Width="30" Height="30"/>
+        <Button x:Name="ButNum6" Content="6" HorizontalAlignment="Left" Margin="105,160,0,0" VerticalAlignment="Top" Click="ButNum6_Click" Width="30" Height="30"/>
+        <Button x:Name="ButNum7" Content="7" HorizontalAlignment="Left" Margin="25,120,0,0" VerticalAlignment="Top" Click="ButNum7_Click" Width="30" Height="30"/>
+        <Button x:Name="ButNum8" Content="8" HorizontalAlignment="Left" Margin="65,120,0,0" VerticalAlignment="Top" Click="ButNum8_Click" Width="30" Height="30"/>
+        <Button x:Name="ButNum9" Content="9" HorizontalAlignment="Left" Margin="105,120,0,0" VerticalAlignment="Top" Click="ButNum9_Click" Width="30" Height="30"/>
+        <Button x:Name="ButNum0" Content="0" HorizontalAlignment="Left" Margin="65,240,0,0" VerticalAlignment="Top" Click="ButNum0_Click" Width="30" Height="30"/>
+        <Button x:Name="ButNumDec" Content="." HorizontalAlignment="Left" Margin="105,240,0,0" VerticalAlignment="Top" Click="ButNumDec_Click" Width="30" Height="30"/>
+
+        <!--Functions-->
+        <Button x:Name="ButClear" Content="C" FontWeight="Bold" HorizontalAlignment="Left" Margin="25,240,0,0" VerticalAlignment="Top" Click="ButClear_Click" Width="30" Height="30"/>
+        <Button x:Name="ButClearEv" Content="CE" HorizontalAlignment="Left" Margin="145,120,0,0" VerticalAlignment="Top" Click="ButClearEv_Click" Width="30" Height="30"/>
+        <Button x:Name="ButEquals" Content="=" HorizontalAlignment="Left" Margin="25,280,0,0" VerticalAlignment="Top" Click="ButEquals_Click" Width="110" Height="30"/>
+        <Button x:Name="ButAdd" Content="+" HorizontalAlignment="Left" Margin="145,280,0,0" VerticalAlignment="Top" Click="ButAdd_Click" Width="30" Height="30"/>
+        <Button x:Name="ButSub" Content="-" HorizontalAlignment="Left" Margin="145,240,0,0" VerticalAlignment="Top" Click="ButSub_Click" Width="30" Height="30"/>
+        <Button x:Name="ButMult" Content="x" HorizontalAlignment="Left" Margin="145,200,0,0" VerticalAlignment="Top" Click="ButMult_Click" Width="30" Height="30"/>
+        <Button x:Name="ButDiv" Content="/" HorizontalAlignment="Left" Margin="145,160,0,0" VerticalAlignment="Top" Click="ButDiv_Click" Width="30" Height="30"/>
+        
+        <!--ScientificFunctions-->
+        <Button x:Name="ButPow" Content="xʸ" HorizontalAlignment="Left" Margin="185,120,0,0" VerticalAlignment="Top" Click="ButPow_Click" Width="30" Height="30"/>
+        <Button x:Name="ButPi" Content="π" HorizontalAlignment="Left" Margin="185,160,0,0" VerticalAlignment="Top" Click="ButPi_Click" Width="30" Height="30"/>
+        <Button x:Name="ButLog" Content="log" HorizontalAlignment="Left" Margin="185,200,0,0" VerticalAlignment="Top" Click="ButLog_Click" Width="30" Height="30"/>
+        <Button x:Name="ButRoute" Content="√" HorizontalAlignment="Left" Margin="185,240,0,0" VerticalAlignment="Top" Click="ButRoute_Click" Width="30" Height="30"/>
+        <Button x:Name="ButSqrd" Content="x²" HorizontalAlignment="Left" Margin="185,280,0,0" VerticalAlignment="Top" Click="ButSqrd_Click" Width="30" Height="30"/>
+        
+    </Grid>
+</Window>

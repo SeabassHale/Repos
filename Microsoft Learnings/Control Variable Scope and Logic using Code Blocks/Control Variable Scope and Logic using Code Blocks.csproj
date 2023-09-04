@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>Control_Variable_Scope_and_Logic_using_Code_Blocks</RootNamespace>
+  </PropertyGroup>
+
+</Project>

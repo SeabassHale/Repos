@@ -1,0 +1,23 @@
+﻿<Window x:Class="TheSomething.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TheSomething"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFFF9898"/>
+                <GradientStop Color="White" Offset="0.197"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <TextBlock x:Name="Title" Height="65" Margin="0,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" HorizontalAlignment="Center" TextAlignment="Center" FontSize="36"><Run Language="en-gb" Text="CBFIT"/></TextBlock>
+        <Button x:Name="AboutBtn" Content="ABOUT" Margin="69,167,570,217" Click="AboutBtn_Click"/>
+        <Button x:Name="LogInBtn" Content="LOG IN" Margin="320,167,320,217" Click="LoginBtn_Click"/>
+        <Button x:Name="MysteryBtn" Content="MYSTERY BUTTON" Margin="571,167,69,217" Click="MysteryBtn_Click"/>
+        <TextBlock x:Name="TxtBlk" HorizontalAlignment="Center" Height="187" Margin="0,222,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="662"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,21 @@
+﻿
+    <Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Welcome to Whatever this is" Height="450" Width="800">
+    <Grid x:Name="Welcome">
+        <Grid.Background>
+            <ImageBrush ImageSource="/gallery-1459268194-gettyimages-176570508.jpg" Stretch="Uniform"/>
+        </Grid.Background>
+        <TextBlock HorizontalAlignment="Center" Margin="0,0,0,200" TextWrapping="Wrap" Text="Select a message option and then choose the Display button." VerticalAlignment="Center"/>
+        <RadioButton x:Name="HelloButton" Content="Hello" HorizontalAlignment="Center" Margin="0,0,300,0" VerticalAlignment="Center" IsChecked="True"/>
+        <RadioButton x:Name="GoodbyeButton" Content="Goodbye" HorizontalAlignment="Center" Margin="300,0,0,0" VerticalAlignment="Center" Checked="GoodbyeButton_Checked"/>
+        <Button Content="Display" HorizontalAlignment="Center" Margin="0,200,0,0" VerticalAlignment="Center" Click="Button_Click"/>
+    </Grid>
+</Window>
+
+

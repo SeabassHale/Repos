@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="gallery-1459268194-gettyimages-176570508.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="gallery-1459268194-gettyimages-176570508.jpg" />
+  </ItemGroup>
+
+</Project>

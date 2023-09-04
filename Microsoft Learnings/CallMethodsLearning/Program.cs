@@ -1,0 +1,20 @@
+﻿//Random dice6 = new Random();
+//int roll6 = dice6.Next(1, 7);
+//Random dice12 = new Random();
+//int roll12 = dice12.Next(1, 13);
+//Console.WriteLine($"You rolled {roll6} and {roll121});
+//Console.WriteLine(roll6 + " x " + roll12 + " equals " + (roll6 * roll12));
+//Console.WriteLine(roll12 + " / " + roll6 + " equals " + ((Decimal)roll12 / (Decimal)roll6));
+//Random dice = new Random();
+//int roll1 = dice.Next();
+//int roll2 = dice.Next(10);
+//int roll3 = dice.Next(50, 101);
+//
+//Console.WriteLine($"First roll: {roll1}");
+//Console.WriteLine($"Second roll: {roll2}");
+//Console.WriteLine($"Third roll: {roll3}");
+int firstValue = 500;
+int secondValue = 600;
+int largerValue;
+largerValue = Math.Max(firstValue, secondValue);
+Console.WriteLine(largerValue);
