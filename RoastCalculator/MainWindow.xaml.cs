@@ -21,27 +21,6 @@ namespace RoastCalculator
     /// Interaction logic for MainWindow.xaml
     /// </summary>
 
-    //public class TimerClass
-    //{
-    //    static Timer cookingTimer = new Timer();
-    //    static int alarmCounter = 1;
-    //    static bool exitFlag = false;
-
-    //    private static void TimerEventProcessor(Object myObject, EventArgs myEventArgs)
-    //    {
-    //        cookingTimer.Stop();
-    //        if(MessageBox.Show("Continue running?", "Count is: " + alarmCounter, MessageBoxButton.YesNo) == DialogResult.Yes)
-    //        {
-    //            alarmCounter +=10;
-    //            cookingTimer.Enabled = true;
-    //        }
-    //        else
-    //        {
-    //            exitFlag = true;
-    //        }
-    //    }
-    //}
-
     public class MainCourse
     {
         public string Name { get; set; }
@@ -139,16 +118,9 @@ namespace RoastCalculator
             DateTime TimeNow = DateTime.Now;
             TimeBox.Text = TimeNow.ToShortTimeString();
             CookingInstructionsBox.Text = maincourse.CookingInstructions;
-            //TimerClass timer = new TimerClass();
-            //timer.Tick +=;
             DateTime FinishCookTime = TimeNow.Add(totalTimeToCook);
             FinishTimeBox.Text = FinishCookTime.ToString("HH:mm");
         }
-
-        //private void AddMoreButton_Click(object sender, RoutedEventArgs e)
-        //{
-
-        //}
 
         private void MainSelector_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
