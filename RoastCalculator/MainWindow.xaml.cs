@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static RoastCalculator.CookingTimeCalculator;
 
 namespace RoastCalculator
 {
@@ -21,21 +22,21 @@ namespace RoastCalculator
     /// Interaction logic for MainWindow.xaml
     /// </summary>
 
-    public class MainCourse
-    {
-        public string Name { get; set; }
-        public TimeSpan CookTime {  get; set; } //cooktime per 1,000g
-        public TimeSpan ExtraCookTime { get; set; } = new TimeSpan(00,00,00); //additional cookingtime on top of weight-based time. NEEDS TO BE CONVERTED TO A TIMESPAN
-        public TimeSpan StandTime { get; set; } = new TimeSpan(00,00,00);
-        // Add TimeSpan for mid-cook alarms / actions
-        public string CookingInstructions { get; set; } // Add String for cooking instructions (oven temp, additional actions/steps, maybe link to recipies?
-    }
+    //public class MainCourse
+    //{
+    //    public string Name { get; set; }
+    //    public TimeSpan CookTime {  get; set; } //cooktime per 1,000g
+    //    public TimeSpan ExtraCookTime { get; set; } = new TimeSpan(00,00,00); //additional cookingtime on top of weight-based time. NEEDS TO BE CONVERTED TO A TIMESPAN
+    //    public TimeSpan StandTime { get; set; } = new TimeSpan(00,00,00);
+    //    // Add TimeSpan for mid-cook alarms / actions
+    //    public string CookingInstructions { get; set; } // Add String for cooking instructions (oven temp, additional actions/steps, maybe link to recipies?
+    //}
 
-    public class Extra : MainCourse
-    {
-        // add a TimeSpan for Pre main finishing cooking
-        // add a TimeSpan for post main finishing cooking
-    }
+    //public class Extra : MainCourse
+    //{
+    //    // add a TimeSpan for Pre main finishing cooking
+    //    // add a TimeSpan for post main finishing cooking
+    //}
 
     public static class Multiplier
     {
@@ -113,13 +114,17 @@ namespace RoastCalculator
 
         private void CalculateTimeButton_Click(object sender, EventArgs e)
         {
-            var maincourse = (MainCourse)MainSelector.SelectedItem;
-            TimeSpan totalTimeToCook = Multiplier.MultiplyTimeSpan(maincourse.CookTime, Convert.ToDouble(WeightBox.Text));
-            DateTime TimeNow = DateTime.Now;
-            TimeBox.Text = TimeNow.ToShortTimeString();
-            CookingInstructionsBox.Text = maincourse.CookingInstructions;
-            DateTime FinishCookTime = TimeNow.Add(totalTimeToCook);
-            FinishTimeBox.Text = FinishCookTime.ToString("HH:mm");
+            // COMMENTED OUT TO TRY THE COOKINGTIMECALCULATOR METHOD
+
+            //var maincourse = (MainCourse)MainSelector.SelectedItem;
+            //TimeSpan totalTimeToCook = Multiplier.MultiplyTimeSpan(maincourse.CookTime, Convert.ToDouble(WeightBox.Text));
+            //DateTime TimeNow = DateTime.Now;
+            //TimeBox.Text = TimeNow.ToShortTimeString();
+            //CookingInstructionsBox.Text = maincourse.CookingInstructions;
+            //DateTime FinishCookTime = TimeNow.Add(totalTimeToCook);
+            //FinishTimeBox.Text = FinishCookTime.ToString("HH:mm");
+
+            CookingTimeCalculatorMethod((MainCourse)MainSelector.SelectedItem, Convert.ToDouble(WeightBox.Text));
         }
 
         private void MainSelector_SelectionChanged(object sender, SelectionChangedEventArgs e)

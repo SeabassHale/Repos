@@ -7,28 +7,35 @@ namespace Timer_Example_Console
 
     //// Examples 1 & 2
 
-    //internal class Program
-    //{
+    internal class Program
+    {
 
-    //    // Example 1
-    //    // A very simple timer example that updates on a single line within the console
+     //Example 1
+     //A very simple timer example that updates on a single line within the console
 
-    //    //static void Main()
-    //    //{
-    //    //    System.Timers.Timer newTimer = new System.Timers.Timer();
-    //    //    newTimer.Elapsed += new ElapsedEventHandler(DisplayTimeEvent);
-    //    //    newTimer.Interval = 1000;
-    //    //    newTimer.Start();
-    //    //    while (Console.Read() != 'q')  // I think this is supposed to quit the timer
-    //    //    {
+        static void Main()
+        {
+            
+            System.Timers.Timer newTimer = new System.Timers.Timer();
+            newTimer.Elapsed += new ElapsedEventHandler(DisplayTimeEvent);
+            newTimer.Interval = 1000;
+            newTimer.Start();
+            while (Console.Read() != 'q')  // I think this is supposed to quit the timer
+            {
 
-    //    //    } 
-    //    //}
+            }
+        }
 
-    //    //public static void DisplayTimeEvent(object source, ElapsedEventArgs e)
-    //    //{
-    //    //    Console.Write(" \r{0} ", DateTime.Now);
-    //    //}
+        public static void DisplayTimeEvent(object source, ElapsedEventArgs e)
+        {
+            List<System.DateTime> timers = new List<System.DateTime>();
+
+            while (true)
+            {
+                timers.Add(DateTime.Now);
+            }
+            Console.Write(timers);
+        }
 
 
     //    // Example 2
@@ -52,52 +59,52 @@ namespace Timer_Example_Console
     //    //}
 
 
-    //} 
+    } 
 
 
-    static class DemoTimers  // Example 3
-    {
-        static System.Timers.Timer time;
-        static List<DateTime> output = new List<DateTime>();
-        public static void Start()
-        {
-            var timer = new System.Timers.Timer(5000);
-            timer.Elapsed += new ElapsedEventHandler(Elapsed_time);
-            timer.Enabled = true;
-            time = timer;
-        }
+    //static class DemoTimers  // Example 3
+    //{
+    //    static System.Timers.Timer time;
+    //    static List<DateTime> output = new List<DateTime>();
+    //    public static void Start()
+    //    {
+    //        var timer = new System.Timers.Timer(5000);
+    //        timer.Elapsed += new ElapsedEventHandler(Elapsed_time);
+    //        timer.Enabled = true;
+    //        time = timer;
+    //    }
 
 
-        static void Elapsed_time(object sender, ElapsedEventArgs e)
-        {
-            output.Add(DateTime.Now);
-        }
+    //    static void Elapsed_time(object sender, ElapsedEventArgs e)
+    //    {
+    //        output.Add(DateTime.Now);
+    //    }
 
-        public static void PrintTimes()
-        {
-            if (output.Count > 0)
-            {
-                Console.WriteLine("TIMERS : ");
-                foreach (var time in output)
-                {
-                    Console.WriteLine(time.ToShortTimeString() + " ");
-                }
-                Console.WriteLine();
-            }
-        }
-    }
-    class Program
-    {
-        static void Main()
-        {
-            DemoTimers.Start();
-            while (true)
-            {
-                DemoTimers.PrintTimes();
-                Console.WriteLine("WAITING TO PRINT");
-                System.Threading.Thread.Sleep(2000);
-            }
-        }
-    }
-    
+    //    public static void PrintTimes()
+    //    {
+    //        if (output.Count > 0)
+    //        {
+    //            Console.WriteLine("TIMERS : ");
+    //            foreach (var time in output)
+    //            {
+    //                Console.WriteLine(time.ToShortTimeString() + " ");
+    //            }
+    //            Console.WriteLine();
+    //        }
+    //    }
+    //}
+    //class Program
+    //{
+    //    static void Main()
+    //    {
+    //        DemoTimers.Start();
+    //        while (true)
+    //        {
+    //            DemoTimers.PrintTimes();
+    //            Console.WriteLine("WAITING TO PRINT");
+    //            System.Threading.Thread.Sleep(2000);
+    //        }
+    //    }
+    //}
+
 }
