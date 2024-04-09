@@ -25,7 +25,7 @@ namespace Battleships
             string input = ReadLine();
             int intInput;
             bool intCheck = int.TryParse(input, out intInput);
-            while (true)
+            while (intCheck == true)
             {
                 switch (intInput)
                 {
@@ -60,12 +60,16 @@ namespace Battleships
             playerShipLocations.Add(new GridPoint("A10", true));
             playerShipLocations.Add(new GridPoint("B10", true));
             playerShipLocations.Add(new GridPoint("C10", true));
+            // *** END OF TESTING ***
+
 
             // populate computerShipLocations
             // *** TESTING TESTING TESTING ***
             computerShipLocations.Add(new GridPoint("A1", true));
             computerShipLocations.Add(new GridPoint("B1", true));
             computerShipLocations.Add(new GridPoint("C1", true));
+            // *** END OF TESTING ***
+
 
             foreach (GridPoint BoardGridPoint in Playboard)
             {
