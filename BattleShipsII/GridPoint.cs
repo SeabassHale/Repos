@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace BattleShipsII
 {
-    internal class GridPoint
+    public class GridPoint
     {
-        public string Identifier { get; set; }
+        public string Identifier = "";
         public bool PlayerShip = false;
         public bool ComputerShip = false;
         public bool PlayerGuess = false;
         public bool ComputerGuess = false;
-        public GridPoint(string identifier)
+        public GridPoint()
         {
-            Identifier = identifier;
+            Identifier = "";
             PlayerShip = false;
             ComputerShip = false;
             PlayerGuess = false;

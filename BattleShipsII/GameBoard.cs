@@ -3,15 +3,22 @@ using static System.Console;
 
 namespace BattleShipsII
 {
-    internal class GameBoard
+    public class GameBoard
     {
+
+
         public int GameBoardSize { get; set; }
-        public GridPoint[] PlayBoard;
+        public GridPoint[] GridPoints { get; set; }
         
-        public GameBoard(int gameBoardSize)
+        public GameBoard(int gameBoardSize, GridPoint[] _gridPoints)
         {
             GameBoardSize = gameBoardSize;
-            GridPoint[] PlayBoard = new GridPoint[100];
+            //GridPoint[] GridPoints = new GridPoint[100]; //Why the hell isn't this saving as a property within the gameboard?
+            //for (int i = 0; i < gameBoardSize; i++)
+            //{
+            //    GridPoints[i] = new GridPoint();
+            //}
+            GridPoints = _gridPoints;
         }
         
 
@@ -22,9 +29,9 @@ namespace BattleShipsII
             int yCoOrd = 1;
             for(int i = 0; i < gb.GameBoardSize;  i++)
             {
-                gb.PlayBoard[i].Identifier = ($"{Convert.ToString(xCoOrd)}{Convert.ToString(yCoOrd)}");
-                xCoOrd++;
-                yCoOrd++;
+                //gb.PlayBoard[i].Identifier = ($"{Convert.ToString(xCoOrd)}{Convert.ToString(yCoOrd)}");
+                //xCoOrd++;
+                //yCoOrd++;
             }
             return gb;
         }
