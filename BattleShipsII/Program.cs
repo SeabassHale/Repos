@@ -4,9 +4,6 @@
     {
         static void Main()
         {
-            //GridPoint testgridpoint = new gridpoint();
-            //testgridpoint.identifier = "potato";
-            //console.writeline($"{testgridpoint.identifier}");
 
             GridPoint[] gridPoints = new GridPoint[100];
             char X = 'A';
@@ -16,27 +13,27 @@
                 gridPoints[i] = new GridPoint();
                 gridPoints[i].Identifier = GridPoint.GridPointIdentifierBuilder(Convert.ToString(X), Convert.ToString(Y));
                 Y++;
-                if( i == 10 || (i+1)%10  == 0)
+                if( (i+1)%10  == 0)
                 {
                     X++;
-                    Y = 0;
+                    Y = 1;
                 }
 
             }
             
             GameBoard gameBoard = new GameBoard(100, gridPoints);
 
-            for (int i = 0; i < 100; i++)
-            {
-                Console.WriteLine(gameBoard.GridPoints[i].Identifier);
-            }
-
             GameBoard.GameBoardBuilder(gameBoard);
 
-            for( int i = 0; i < 100; i++) 
-            {
-                Console.WriteLine(gameBoard.GridPoints[i]);
-            }
+            string testGuess1 = "A1";
+            string testGuess2 = "J4";
+
+            PlayMethods.PlayerShipPlacement(gameBoard, testGuess2);
+
+            PlayMethods.PlayerGuessChecker(gameBoard, testGuess1);
+
+            PlayMethods.ComputerGuessChecker(gameBoard, testGuess2);
+
         }
     }
 }

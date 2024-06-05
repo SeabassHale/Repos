@@ -13,6 +13,8 @@ namespace BattleShipsII
         public bool ComputerShip = false;
         public bool PlayerGuess = false;
         public bool ComputerGuess = false;
+        public bool PlayerHitFlag = false;
+        public bool ComputerHitFlag = false;
         public GridPoint()
         {
             Identifier = "";
@@ -20,6 +22,8 @@ namespace BattleShipsII
             ComputerShip = false;
             PlayerGuess = false;
             ComputerGuess = false;
+            PlayerHitFlag = false;
+            ComputerHitFlag = false;
         }
 
         public static string GridPointIdentifierBuilder(string _x, string _y)
